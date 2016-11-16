@@ -1,16 +1,16 @@
 <div class="content">
   <header><h1>Register</h1></header>
   <main>
-    <form>
+    <form action="/encounters">
       <div class="formFields">
         <input type="text" placeholder="Name" text="" name="name" [(ngModel)]="colonist.name" />
-        <input type="number" placeholder="Age" name="age" [(ngModel)]="colonist.age">
+        <input type="number" min="0"placeholder="Age" name="age" [(ngModel)]="colonist.age">
         <select name="job_id" [(ngModel)]="colonist.job_id" required>
           <option [value]="NO_JOB_SELECTED">--- Select a Job ---</option>
-          <option *ngFor="let job of jobList" [value]="job.id">{{ job.name }}</option>
+          <option *ngFor="let job of jobsList" [value]="job.id">{{ job.name }}</option>
         </select>
       </div>
-      <button [disabled]="!jobSelected" class="formSubmit">Check In</button>
+      <button [disabled]="!jobSelected" class="formSubmit" type="submit">Check In</button>
     </form>  
   </main>
 </div>

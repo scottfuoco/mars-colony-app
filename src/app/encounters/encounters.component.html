@@ -1,3 +1,19 @@
-<p>
-  encounters works!
-</p>
+<header>
+  <h1>Recent Encounters</h1>
+  <p>Seen an Alien? Report it!</p>
+</header>
+
+<main>
+  <ul>
+    <li *ngFor="let encounter of encountersList">
+      <p>{{ encounter.date }} - {{ encounter.atype }}</p>
+      <p>{{ encounter.action }}</p>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <a routerLink="/report" routerLinkActive="active">
+    <div class="reportEncounterLink">Report Encounter</div>
+  </a>
+</footer>

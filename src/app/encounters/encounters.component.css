@@ -1,0 +1,71 @@
+header {
+    height: 6vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+ul {
+    height: 69vh;
+    overflow: auto;
+}
+
+li {
+    padding: .2rem 1rem;
+    border-bottom: 1px solid #000;
+}
+li:first-child{
+    border-top: 1px solid #000;
+}
+
+li:nth-child(2n){
+    background-color:lightgrey;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer{
+    height: 20vh;
+}
+
+.reportEncounterLink {
+    height:100%;
+    width: 100%;
+    background-color: #000;
+    font-size: 2.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
