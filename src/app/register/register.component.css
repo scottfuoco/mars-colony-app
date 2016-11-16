@@ -46,7 +46,16 @@ input, select{
     border-bottom: 1px solid lightgrey;
     height: 2rem;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+input.ng-invalid {
+    border: 3px solid red;
+}
+
+.formFields input:-webkit-autofill{
+    background-color: #000 !important;
+    color: red !important;
 }
 
 input::-webkit-input-placeholder {
