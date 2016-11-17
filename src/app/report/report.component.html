@@ -5,13 +5,13 @@
   </header>
 
   <main>
-    <form>
-        <div class="formFields" action="/">
-          <select class="alien-select" name="id" #alien required>
+    <form [formGroup]="reportForm">
+        <div class="formFields">
+          <select class="alien-select" formControlName="id">
             <option [value]="NO_ALIEN_TYPE_SELECTED">--- Select Alien Type ---</option>
             <option *ngFor="let alien of aliensList" [value]="alien.id">{{ alien.type }}</option>
           </select>
-          <textarea class="action-textarea" name="action" placeholder="Action Taken" name="action"></textarea>
+          <textarea class="action-textarea" name="action" placeholder="Action Taken" formControlName="action"></textarea>
         </div>
         <button class="formSubmit" type="submit">Submit Report</button>
       </form>  

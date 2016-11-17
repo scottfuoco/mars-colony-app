@@ -1,11 +1,11 @@
 <div class="content">
   <header><h1>Register</h1></header>
   <main>
-    <form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
+    <form [formGroup]="registerForm">
       <div class="formFields">
-        <input type="text" placeholder="Name" text="" name="name" [(ngModel)]="colonist.name" />
-        <input type="number" min="0"placeholder="Age" name="age" [(ngModel)]="colonist.age" />
-        <select name="job_id" [(ngModel)]="colonist.job_id">
+        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="number" min="0" placeholder="Age" formControlName="age"/>
+        <select formControlName="job_id">
           <option [value]="NO_JOB_SELECTED">--- Select a Job ---</option>
           <option *ngFor="let job of jobsList" [value]="job.id">{{ job.name }}</option>
         </select>

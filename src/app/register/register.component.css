@@ -49,7 +49,7 @@ input, select{
     margin-bottom: 1.5rem;
 }
 
-input.ng-invalid {
+input.ng-invalid.ng-touched {
     border: 3px solid red;
 }
 
