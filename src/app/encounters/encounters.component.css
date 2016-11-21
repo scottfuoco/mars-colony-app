@@ -1,5 +1,5 @@
 header {
-    height: 6vh;
+    height: 7vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@ h1 {
 }
 
 ul {
-    height: 69vh;
+    height: 73vh;
     overflow: auto;
 }
 

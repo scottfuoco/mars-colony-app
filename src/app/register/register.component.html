@@ -1,9 +1,9 @@
 <div class="content">
   <header><h1>Register</h1></header>
   <main>
-    <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit($event)">
       <div class="formFields">
-        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="text" placeholder="Name" formControlName="name" ngControl="name" />
         <input type="number" min="0" placeholder="Age" formControlName="age"/>
         <select formControlName="job_id">
           <option [value]="NO_JOB_SELECTED">--- Select a Job ---</option>

@@ -30,7 +30,8 @@ form{
 .formFields {
     display: flex;
     flex-direction: column;
-    height: 69vh;
+    align-items: center;
+    height: 74vh;
     padding-top: 1rem;
 }
 
@@ -42,7 +43,7 @@ select{
     height: 2rem;
     font-size: 1.5rem;
     width: 50%;
-    margin: 0 auto 2 rem;
+    margin-bottom: 2rem;
 }
 
 textarea {
@@ -50,7 +51,6 @@ textarea {
     border: 0;
     width: 70%;
     height: 50%;
-    margin: 0 auto;
     font-size: 1.5rem;
 }
 

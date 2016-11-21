@@ -6,19 +6,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { EncountersComponent } from './encounters/encounters.component';
+import { EncounterComponent } from './encounter/encounter.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ReportComponent } from './report/report.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+
 const appRoutes: Routes = [
   { path: 'encounters', component: EncountersComponent },
+  { path: 'encounter/:id', component: EncounterComponent },
   { path: '', component: WelcomeComponent },
   { path: 'report', component: ReportComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundComponent }
 ];
-
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     WelcomeComponent,
     ReportComponent,
     RegisterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EncounterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Encounter } from '../models';
 import EncountersService from '../services/encounters.service';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-encounters',
@@ -10,21 +10,20 @@ import EncountersService from '../services/encounters.service';
 })
 export class EncountersComponent implements OnInit {
 
-  encountersList: Encounter[];
+  encountersList: {}[];
 
-  constructor(encountersService: EncountersService) {
-    encountersService.getEncounters().subscribe((encounters) => {
-      this.encountersList = encounters.sort((a, b) => {
-                                      return new Date(b.date).getTime() - new Date(a.date).getTime();
-                                      })
-                                      .splice(0,100);
-    }, (err) => {
-      console.log(err);
-    });
-
-  }
+  constructor(private _encountersService: EncountersService) {
+        _encountersService.getEncountersWithColonist().subscribe((encounters)=>{
+          console.log(encounters);
+            return this.encountersList = encounters;
+            },
+          (err)=>{
+            console.log(err);
+          });
+    }
 
   ngOnInit() {
+
   }
 
 }

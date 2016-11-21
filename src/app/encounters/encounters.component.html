@@ -6,8 +6,9 @@
 <main>
   <ul>
     <li *ngFor="let encounter of encountersList">
-      <p>{{ encounter.date }} - {{ encounter.atype }}</p>
-      <p>{{ encounter.action }}</p>
+      <p>{{ encounter.date }}</p>
+      <p>{{ encounter.colonist.name }} - {{ encounter.atype }}: {{ encounter.action }}</p>
+      <a href="/encounter/{{encounter.id}}">View Comments</a>
     </li>
   </ul>
 </main>
