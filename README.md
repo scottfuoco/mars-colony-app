@@ -29,4 +29,4 @@ It can be a useful reference for the following:
 * `cd` to the project root
 * Run `> npm install`
 * Run `> npm start` to start the development server on port 4200
-* Open localhost:4200 to view
+* Open localhost:4200 in a web browser to view
