@@ -19,7 +19,6 @@ export class EncounterComponent implements OnInit {
     this.colonist = new Colonist(null, null, null, null);
     this.encounter = new EncounterColonist(null, null, null, null, null, this.colonist);
     _encountersService.getSingleEncountersWithColonist(id).subscribe((singleEncounter)=>{
-      console.log(singleEncounter[0]);
         return this.encounter = singleEncounter[0];
         },
       (err)=>{

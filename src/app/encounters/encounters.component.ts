@@ -14,7 +14,6 @@ export class EncountersComponent implements OnInit {
 
   constructor(private _encountersService: EncountersService) {
         _encountersService.getEncountersWithColonist().subscribe((encounters)=>{
-          console.log(encounters);
             return this.encountersList = encounters;
             },
           (err)=>{
